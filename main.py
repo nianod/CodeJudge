@@ -11,11 +11,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://analyzer-engine.top"],
+    allow_origins=["https://analyzer-engine.top", "http://localhost:3000"],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
-)
+)   
 
 # --- Routers ---
 app.include_router(repo.router)
